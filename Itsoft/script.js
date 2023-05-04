@@ -1,67 +1,64 @@
-// let slideIndex = 1;
-// showSlides(slideIndex);
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// } 
-
-
-// // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {myFunction()};
-
-// // Get the navbar
-// var navbar = document.getElementsByClassName("container3");
-
-// // Get the offset position of the navbar
-// var sticky = navbar.offsetTop;
-
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// } 
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
 
 
-// var menu1 = document.getElementById('menu1');
-// var menu2 = document.getElementById('menu2');
-// var button = document.getElementById('menu-toggle');
-// var btn2 = document.getElementById('btn2')
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
-// button.addEventListener('click', () => {
-//     menu1.classList.toggle('active')
-// })
+// Get the navbar
+var navbar = document.getElementsByClassName("container3");
 
-// btn2.addEventListener('click', () => {
-//     menu2.classList.toggle('active2')
-// })
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+} 
 
 
-//practice//
-let output;
-output = document.body.children;
-console.log(output);
+var menu1 = document.getElementById('menu1');
+var menu2 = document.getElementById('menu2');
+var button = document.getElementById('menu-toggle');
+var btn2 = document.getElementById('btn2')
+
+button.addEventListener('click', () => {
+    menu1.classList.toggle('active')
+})
+
+btn2.addEventListener('click', () => {
+    menu2.classList.toggle('active2')
+})
+
+
+
